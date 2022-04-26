@@ -1,0 +1,37 @@
+type Company {
+	name: String!
+	speakers: [Speaker!]! @relationship(type: "WORKS_AT", direction: IN)
+}
+
+type Presentation {
+	end: DateTime!
+	id: BigInt!
+	inRoom: Room! @relationship(type: "IN_ROOM", direction: OUT)
+	location: String!
+	type: Type! @relationship(type: "OF_TYPE", direction: OUT)
+	presentedBy: [Speaker!]! @relationship(type: "PRESENTS", direction: IN)
+	start: DateTime!
+	summary: String!
+	title: String!
+}
+
+type Room {
+	id: String!
+	presentations: [Presentation!]! @relationship(type: "IN_ROOM", direction: IN)
+}
+
+type Speaker {
+	bio: String!
+	company: String!
+	fullName: String!
+	id: BigInt!
+	imageUrl: String!
+	presents: [Presentation!]! @relationship(type: "PRESENTS", direction: OUT)
+	twitterHandle: String
+	worksAt: [Company!]! @relationship(type: "WORKS_AT", direction: OUT)
+}
+
+type Type {
+	name: String!
+	presentations: [Presentation!]! @relationship(type: "OF_TYPE", direction: IN)
+}

@@ -1,0 +1,84 @@
+{
+  "data": {
+    "speakers": [
+      {
+        "fullName": "Björn Beskow",
+        "twitterHandle": null,
+        "worksAt": [{ "name": "Callista Enterprise AB" }],
+        "presents": [
+          {
+            "title": "Multitenancy: cost-efficient and scalable patterns for Software-as-a-Service",
+            "inRoom": { "id": "Room A2" },
+            "type": {
+              "name": "presentation",
+              "presentationsAggregate": { "count": 61 },
+              "presentations": [
+                {
+                  "title": "Experiences from large project maintenance at the Norwegian tax authority"
+                },
+                {
+                  "title": "Reinventing Minecraft world generation"
+                },
+                {
+                  "title": "Framework agnostic REST api testing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "fullName": "Martin Bäumer",
+        "twitterHandle": null,
+        "worksAt": [{ "name": "Squeed AB" }],
+        "presents": [
+          {
+            "title": "Machine learning in your hobby project: Obstacles, entry points and solutions",
+            "inRoom": { "id": "Room A4" },
+            "type": {
+              "name": "presentation",
+              "presentationsAggregate": { "count": 61 },
+              "presentations": [
+                {
+                  "title": "Experiences from large project maintenance at the Norwegian tax authority"
+                },
+                {
+                  "title": "Reinventing Minecraft world generation"
+                },
+                {
+                  "title": "Framework agnostic REST api testing"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "fullName": "Erik Hellman",
+        "twitterHandle": "ErikHellman",
+        "worksAt": [{ "name": "Not Free Beer AB" }],
+        "presents": [
+          {
+            "title": "The technical solutions behind Öppna Skolplattformen",
+            "inRoom": { "id": "Room A4" },
+            "type": {
+              "name": "presentation",
+              "presentationsAggregate": { "count": 61 },
+              "presentations": [
+                {
+                  "title": "Experiences from large project maintenance at the Norwegian tax authority"
+                },
+                {
+                  "title": "Reinventing Minecraft world generation"
+                },
+                {
+                  "title": "Framework agnostic REST api testing"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

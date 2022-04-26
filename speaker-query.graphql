@@ -1,0 +1,24 @@
+query {
+  speakers(where: { company_CONTAINS: "AB" }) {
+    fullName
+    twitterHandle
+    worksAt {
+      name
+    }
+    presents {
+      title
+      inRoom {
+        id
+      }
+      type {
+        name
+        presentationsAggregate {
+          count
+        }
+        presentations(options: { limit: 3 }) {
+          title
+        }
+      }
+    }
+  }
+}

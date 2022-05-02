@@ -4,15 +4,14 @@ type Company {
 }
 
 type Presentation {
-	end: DateTime!
 	id: BigInt!
+	title: String!
+	start: DateTime!
+	end: DateTime!
+	summary: String!
 	inRoom: Room! @relationship(type: "IN_ROOM", direction: OUT)
-	location: String!
 	type: Type! @relationship(type: "OF_TYPE", direction: OUT)
 	presentedBy: [Speaker!]! @relationship(type: "PRESENTS", direction: IN)
-	start: DateTime!
-	summary: String!
-	title: String!
 }
 
 extend type Presentation {
@@ -31,7 +30,6 @@ type Room {
 
 type Speaker {
 	bio: String!
-	company: String!
 	fullName: String!
 	id: BigInt!
 	imageUrl: String!

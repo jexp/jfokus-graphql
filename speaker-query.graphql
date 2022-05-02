@@ -1,5 +1,5 @@
 query {
-  speakers(where: { company_CONTAINS: "AB" }) {
+  speakers(where: { worksAt_SOME: { name_CONTAINS: "AB" }}) {
     fullName
     twitterHandle
     worksAt {

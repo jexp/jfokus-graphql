@@ -1,3 +1,7 @@
+create index on :Speaker(fullName);
+create index on :Presentation(title);
+
+
 CALL apoc.load.json("https://jfokus.se/events/22/schedule/") 
 yield value
 

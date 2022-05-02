@@ -15,6 +15,15 @@ type Presentation {
 	title: String!
 }
 
+extend type Presentation {
+  parallel: [Presentation!]! 
+  	@cypher(statement: """
+      	MATCH (p:Presentation) 
+        WHERE p.start >= this.start AND p.end <= this.end 
+        RETURN p
+      """)
+}
+
 type Room {
 	id: String!
 	presentations: [Presentation!]! @relationship(type: "IN_ROOM", direction: IN)

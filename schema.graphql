@@ -4,14 +4,14 @@ type Company {
 }
 
 type Presentation {
-	id: BigInt!
-	title: String!
-	start: DateTime!
 	end: DateTime!
-	summary: String!
+	id: BigInt!
 	inRoom: Room! @relationship(type: "IN_ROOM", direction: OUT)
 	type: Type! @relationship(type: "OF_TYPE", direction: OUT)
 	presentedBy: [Speaker!]! @relationship(type: "PRESENTS", direction: IN)
+	start: DateTime!
+	summary: String
+	title: String!
 }
 
 extend type Presentation {
@@ -23,16 +23,17 @@ extend type Presentation {
       """)
 }
 
+
 type Room {
 	id: String!
 	presentations: [Presentation!]! @relationship(type: "IN_ROOM", direction: IN)
 }
 
 type Speaker {
-	bio: String!
+	bio: String
 	fullName: String!
 	id: BigInt!
-	imageUrl: String!
+	imageUrl: String
 	presents: [Presentation!]! @relationship(type: "PRESENTS", direction: OUT)
 	twitterHandle: String
 	worksAt: [Company!]! @relationship(type: "WORKS_AT", direction: OUT)

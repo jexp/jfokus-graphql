@@ -15,7 +15,7 @@ FOREACH (row in value.speakers |
 WITH *
 UNWIND value.presentations as row
 MERGE (p:Presentation {id:row.id})
-ON CREATE SET p += row {.title, .type, .summary,
+ON CREATE SET p += row {.title, .summary,
                          start: datetime({epochSeconds:row.startTime}), 
                          end: datetime({epochSeconds:row.endTime})}
 
